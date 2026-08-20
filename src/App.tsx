@@ -1,11 +1,26 @@
-
+import { Header } from './components/Header'
+import { About } from './sections/About'
+import { Contact } from './sections/Contact'
+import { Experience } from './sections/Experience'
+import { Footer } from './sections/Footer'
+import { Hero } from './sections/Hero'
+import { Projects } from './sections/Projects'
+import { Skills } from './sections/Skills'
 
 function App() {
   return (
-    <main>
-      <h1>Bayron Escalante</h1>
-      <p>Full Stack & Android Developer</p>
-    </main>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <Projects />
+        <Experience />
+        <Skills />
+        <About />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   )
 }
 
