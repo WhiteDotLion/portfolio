@@ -13,15 +13,32 @@ export function Contact() {
             <p>Estoy abierto a nuevas oportunidades como Full Stack Developer y Android Developer.</p>
           </div>
           <ul className="contact-links">
-            {contactLinks.map((link) => (
-              <li key={link.label}>
-                {link.href ? (
-                  <a href={link.href} target="_blank" rel="noreferrer">{link.label} <span aria-hidden="true">↗</span></a>
-                ) : (
-                  <span aria-disabled="true" title="Enlace pendiente de configurar">{link.label} <small>Pendiente</small></span>
-                )}
-              </li>
-            ))}
+            {contactLinks.map((link) => {
+              const isExternal = link.href?.startsWith('http')
+
+              return (
+                <li key={link.label}>
+                  {link.href ? (
+                    <a
+                      href={link.href}
+                      target={isExternal ? '_blank' : undefined}
+                      rel={isExternal ? 'noopener noreferrer' : undefined}
+                      aria-label={
+                        isExternal
+                          ? `${link.label} (abre en una pestaña nueva)`
+                          : link.label
+                      }
+                    >
+                      {link.label} <span aria-hidden="true">↗</span>
+                    </a>
+                  ) : (
+                    <span aria-disabled="true" title="Enlace pendiente de configurar">
+                      {link.label} <small>Pendiente</small>
+                    </span>
+                  )}
+                </li>
+              )
+            })}
           </ul>
         </div>
       </Container>

@@ -30,7 +30,11 @@ export function Hero() {
               Ver proyectos <span aria-hidden="true">↘</span>
             </a>
             {cvPath ? (
-              <a className="button button-secondary" href={cvPath} download>
+              <a
+                className="button button-secondary"
+                href={cvPath}
+                download="Byron_Escalante_CV.pdf"
+              >
                 Descargar CV <span aria-hidden="true">↓</span>
               </a>
             ) : (

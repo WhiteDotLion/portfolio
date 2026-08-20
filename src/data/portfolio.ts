@@ -91,12 +91,10 @@ export const skillGroups = [
   },
 ]
 
-// Completa estos valores cuando los perfiles y el PDF estén disponibles.
 export const contactLinks: ContactLink[] = [
-  { label: 'LinkedIn', href: null },
-  { label: 'GitHub', href: null },
-  { label: 'Email', href: null },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/byron-escalante' },
+  { label: 'GitHub', href: 'https://github.com/WhiteDotLion' },
+  { label: 'Email', href: 'mailto:byron.escalante.g@gmail.com' },
 ]
 
-// Ejemplo futuro: '/cv-bayron-escalante.pdf' para un archivo dentro de public/.
-export const cvPath: string | null = null
+export const cvPath = '/Byron_Escalante_CV.pdf'
